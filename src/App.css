@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: url("https://img.freepik.com/free-photo/hr-reading-applicants-resume-job-interview-top-closeup-view_1163-4672.jpg?ga=GA1.1.1695219486.1736758155&semt=ais_hybrid") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container Box */
+.container {
+  width: 90%;
+  max-width: 750px;
+  margin: 50px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Heading */
+h1, h2 {
+  color: #4B0082;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Button */
+button {
+  background-color: #800080;
   color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #6a006a;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* File Input */
+input[type="file"] {
+  margin: 10px 0;
+}
+
+/* Upload Box */
+.upload-box {
+  border: 2px dashed #800080;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.upload-box:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.02);
+}
+
+/* File List */
+.uploaded-files {
+  text-align: center;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+th {
+  background-color: #4B0082;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f4ff;
+}
+
+tr:hover {
+  background-color: #e0ccff;
+  transition: 0.3s;
+}
+
+/* Icons */
+.pdf-icon {
+  color: red;
+  margin-right: 5px;
+}
+
+.download-icon {
+  color: #4B0082;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.download-icon:hover {
+  transform: scale(1.2);
+  color: #800080;
+}
+
+/* Medal Colors */
+.gold { color: gold; }
+.silver { color: silver; }
+.bronze { color: #cd7f32; }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
